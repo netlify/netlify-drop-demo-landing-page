@@ -23,8 +23,6 @@
   --body-border: .6em;
   --body-padding: 3vw;
   --color-mode: 'light';
-  --color-dark: var(--color-teal-T1000);
-  --color-light: var(--color-gray-D200);
   --background: var(--color-yellow-Y500);
   --background-alt:  var(--color-yellow-Y400);
   --text-color: var(--color-gray-L700);
@@ -42,9 +40,9 @@
   }
 
   :root:not([data-user-color-scheme]) {
-    --background: var(--color-dark);
+    --background: var(--color-teal-T1000);
     --background-alt: var(--color-teal-T900);
-    --text-color: var(--color-light);
+    --text-color: var(--color-gray-L200);
     --border-color: var(--color-teal-T800);
     --mode-icon: '🌕';
     --mode-icon-opacity: .85;
@@ -52,9 +50,9 @@
 }
 
 [data-user-color-scheme='dark'] {
-  --background: var(--color-dark);
+  --background: var(--color-teal-T1000);
   --background-alt: var(--color-teal-T900);
-  --text-color: var(--color-light);
+  --text-color: var(--color-gray-L200);
   --border-color: var(--color-teal-T800);
   --mode-icon: '🌕';
   --mode-icon-opacity: .85;
@@ -112,9 +110,10 @@ body.no-js .toggle-button {
 
 .toggle-button {
   margin-top: auto;
-  padding: .5em 1em;
-  background: none;
+  padding: .4em .8em;
+  background-color: var(--background-alt);
   border: none;
+  border-radius: 5px;
   font-size: clamp(1rem, 1vw, 1.5rem);
   color: var(--text-color);
   cursor: pointer;
@@ -128,8 +127,10 @@ body.no-js .toggle-button {
 .toggle-button:focus {
   outline: none;
   border: none;
-  background-color: var(--background-alt);
-  border-radius: 5px;
+}
+
+.toggle-button:focus-visible {
+  outline: 2px solid var(--text-color);
 }
 
 /* Main
