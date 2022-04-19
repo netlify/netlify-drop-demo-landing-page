@@ -34,7 +34,7 @@ const getCSSCustomProp = (propKey) => {
 };
 
 /**
- * Takes either a passed settings ('light'|'dark') or grabs that from localStorage.
+ * Takes either a passed setting ('light'|'dark') or grabs that from localStorage.
  * If it can’t find the setting in either, it tries to load the CSS color mode,
  * controlled by the media query
  */
@@ -51,7 +51,7 @@ const applySetting = passedSetting => {
 }
 
 /**
- * Get’s the current setting > reverses it > stores it
+ * Gets the current setting > reverses it > stores it
  */
 const toggleSetting = () => {
   let currentSetting = localStorage.getItem(STORAGE_KEY);
